@@ -47,4 +47,4 @@ Compute the metrics analysis for the created molecules
 
 python eval_metrics.py 
 
-### The final model and results will be in the folder of ./output/output_{dataset}/, it contains:
+### The final model and results will be in the folder of ./output/output_{dataset}/
