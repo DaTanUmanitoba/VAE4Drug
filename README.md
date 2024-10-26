@@ -1,4 +1,4 @@
-## Part of the implementation is inspired by and based on the work of: 
+## Part of the implementation is inspired by the work of: 
 https://github.com/benatorc/fast_explore/ (Mostly the part of the Graph embedding for molecules )
 
 ## Folder structure:
@@ -45,12 +45,12 @@ python train.py
 ### Step 5:
 Generate synthesized fragments from the trained model
 
-python latent_sampling.py 
+python new_frag.py 
 
 ### Step 6:
 Merge the synthesized fragments with the backbones to create new molecules
 
-python sample_merge_molecules.py 
+python merge_molecules.py 
 
 ### Step 7:
 Compute the metrics analysis for the created molecules
