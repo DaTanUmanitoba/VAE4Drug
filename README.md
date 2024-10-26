@@ -1,13 +1,7 @@
-## Part of the implementation is inspired by the work of: 
-https://github.com/benatorc/fast_explore/ (Mostly the part of the Graph embedding for molecules )
-
 ## Folder structure:
-1. ./data: all the experiment datasets tried in this study, inculding GSK3, JNK3 and BACE datasets
+1. ./data: query and download datasets here, inculding GSK3, JNK3 and BACE datasets
 2. ./model: The VQ-VAE model implementation, including ./model/mol_graph, the graph embedding initialization for the molecules
-3. ./output: The generated data and results
-4. ./stat_analysis: some statistical results for the benchmark datasets
-5. ./*py: pipeline scripts, see contents below
-6. ./*txt: the training trajectory files
+3. ./*py: pipeline scripts, see contents below
 
 ## Enviroment: 
 I work with Python 3.8, but later versions should be Okay.
@@ -15,11 +9,7 @@ I work with Python 3.8, but later versions should be Okay.
 Install packages listed in ./requirements.txt
 
 ## How to run:
-For each of the dataset, the analysis pipeline is summed into a '.sh' file. For example the 'jnk3.sh' is for the dataset 'JNK3'
-
-Description of the scripts: (see the example in "jnk3.sh" and help information for each script)
-
-Suppose you have your training data in the folder "./data/" (example: ./data/gsk3/training.csv)
+Suppose you have downloaded your training data in the folder "./data/" (example: ./data/gsk3/training.csv)
 
 ### Step 1:
 train a randomforest classifier based on Morgan fingerprints of the molecules as the oracle predictor for the gsk3 and jnk3 dataset, 
@@ -57,8 +47,4 @@ Compute the metrics analysis for the created molecules
 
 python eval_metrics.py 
 
-### The final result is in the folder of ./output/output_{dataset}/, it contains:
-1) models/: the trained models
-2) generated_mols/: The generated molecules
-3) eval_result/: The evaluation results and statistics
-4) Some more intemediate results in this folder.
+### The final model and results will be in the folder of ./output/output_{dataset}/, it contains:
