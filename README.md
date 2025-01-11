@@ -13,7 +13,7 @@ Suppose you have downloaded your training data in the folder "./data/" (example:
 
 ### Step 1:
 train a randomforest classifier based on Morgan fingerprints of the molecules as the oracle predictor for the gsk3 and jnk3 dataset, 
-for BACE dataset, the oracle predictor is trained using chemprop package becuase the rf model performs bad.
+for BACE dataset, the oracle predictor is trained using chemprop package.
 
 python rf_train.py
 
